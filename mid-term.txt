@@ -112,3 +112,6 @@ console.log(obj.prop.getFullname());
 var test = obj.prop.getFullname;
 
 console.log(test());
+
+The result of running this code is going to be 'Aurelio De Rosa' and 'John Doe'. The reasons for this are that when you console.log(obj.prop.getFullname()) you're running the getFullname function on the object called obj with the property of prop and the value of fullname in that object is 'Aurelio De Rosa'. Now with console.log(test()) you're running the getFullname function on the global scope and there the value of fullname is 'John Doe'.
+
