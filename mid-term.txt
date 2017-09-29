@@ -38,10 +38,38 @@ var obj = {key: [1, 20, 30]};
 getElementsGreaterThan10AtProperty(obj, 'key');
 
 Challenge 4
-How would you use a closure to create a private counter? You will need to return more than one function. At least two. One to add to the
-counter, and another to retrieve the value. You will need to research how to return more than one function from a function. 
 
-TIP: Think method, rather than function. Do not use the prototype property directly...
+var counter = (function() {
+  var privateCounter = 0;
+  return {
+    add: function(num) {
+      privateCounter += num;
+    },
+    subtract: function(num) {
+      privateCounter -= num;
+    },
+    multiply: function(num) {
+      privateCounter *= num;
+    },
+    divide: function(num) {
+      privateCounter /= num;
+    },
+    value: function() {
+      return privateCounter;
+    }
+  };   
+}
+)();
+
+console.log(counter.value()); //0
+counter.add(10);
+console.log(counter.value()); //10
+counter.multiply(5);
+console.log(counter.value()); //50
+counter.divide(5);
+console.log(counter.value()); //10
+counter.subtract(10);
+console.log(counter.value()); //0
 
 Challenge 5
 What is the result of running this code? Explain your answer.
