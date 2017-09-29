@@ -38,7 +38,8 @@ var obj = {key: [1, 20, 30]};
 getElementsGreaterThan10AtProperty(obj, 'key');
 
 Challenge 4
-How would you use a closure to create a private counter? You will need to return more than one function. At least two. One to add to the counter, and another to retrieve the value. You will need to research how to return more than one function from a function. 
+How would you use a closure to create a private counter? You will need to return more than one function. At least two. One to add to the
+counter, and another to retrieve the value. You will need to research how to return more than one function from a function. 
 
 TIP: Think method, rather than function. Do not use the prototype property directly...
 
@@ -62,5 +63,8 @@ var test = obj.prop.getFullname;
 
 console.log(test());
 
-The result of running this code is going to be 'Aurelio De Rosa' and 'John Doe'. The reasons for this are that when you console.log(obj.prop.getFullname()) you're running the getFullname function on the object called obj with the property of prop and the value of fullname in that object is 'Aurelio De Rosa'. Now with console.log(test()) you're running the getFullname function on the global scope and there the value of fullname is 'John Doe'.
+The result of running this code is going to be 'Aurelio De Rosa' and 'John Doe'. The reasons for this are that when you
+console.log(obj.prop.getFullname()) you're running the getFullname function on the object called obj with the property of prop and the
+value of fullname in that object is 'Aurelio De Rosa'. Now with console.log(test()) you're running the getFullname function on the
+global scope and there the value of fullname is 'John Doe'.
 
